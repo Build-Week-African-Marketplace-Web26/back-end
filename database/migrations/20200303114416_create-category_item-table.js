@@ -3,9 +3,14 @@ exports.up = function(knex) {
     return knex.schema.createTable('categories_items', tbl => {
         tbl.increments();
         tbl.integer('category_id')
-            .notNullable();
+            .notNullable()
+            .references('id')
+            .inTable('categories');
         tbl.integer('item_id')
-            .notNullable();
+            .unique()
+            .notNullable()
+            .references('id')
+            .inTable('items');
     })
 };
 

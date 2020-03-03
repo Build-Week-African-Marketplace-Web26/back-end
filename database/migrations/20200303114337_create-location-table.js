@@ -3,7 +3,6 @@ exports.up = function(knex) {
     return knex.schema.createTable('locations', tbl => {
         tbl.increments();
         tbl.text('address', 128)
-            .notNullable();
         tbl.text('city', 128)
             .notNullable();
         tbl.text('state', 128)

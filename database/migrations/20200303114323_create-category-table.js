@@ -2,7 +2,7 @@
 exports.up = function(knex) {
     return knex.schema.createTable('categories', tbl => {
         tbl.increments();
-        tbl.text('name', 128)
+        tbl.text('name')
             .unique()
             .notNullable();
     })

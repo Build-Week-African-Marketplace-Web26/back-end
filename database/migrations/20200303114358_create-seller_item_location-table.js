@@ -3,11 +3,17 @@ exports.up = function(knex) {
     return knex.schema.createTable('sellers_items_locations', tbl => {
         tbl.increments();
         tbl.integer('seller_id')
-            .notNullable();
+            .notNullable()
+            .references('id')
+            .inTable('sellers');
         tbl.integer('item_id')
-            .notNullable();
-        tbl.integer('market_id')
-            .notNullable();
+            .notNullable()
+            .references('id')
+            .inTable('items');
+        tbl.integer('location_id')
+            .notNullable()
+            .references('id')
+            .inTable('locations');
     })
 };
 
