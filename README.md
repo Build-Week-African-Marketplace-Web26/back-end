@@ -15,12 +15,10 @@
 
 ```
 {
-  customers_name: "Example User", 
-  customers_plot: "165", 
-  customers_phone_number: "164-1535-1256", 
-  customers_email: "examplecustomer@gmail.com", 
-  password: "password", 
-  due_date: "2019-12-15" <------ OPTIONAL
+	"username": "seeduser2",
+	"password": "password123",
+	"name": "Handell Desulme",
+	"email_address": "hd@example.com"
 }
 ```
 
@@ -28,13 +26,11 @@
 
 ```
 {
-  id: "", 
-  username (unique): "", 
-  password: "", 
-  name: "", 
-  first name: "", 
-  last name: "", 
-  email address: ""
+  "id": 3,
+  "username": "seeduser2",
+  "password": "$2a$08$bxkaeRu0H6QRybQpCcQZZ.PMmcwBo/P3TF7nijBUZUQJOXRjtck5y",
+  "name": "Handell Desulme",
+  "email_address": "hd@example.com",
 }
 ```
 
@@ -44,13 +40,11 @@
 
 ```
 {
-  sellers_name: "Example Driver", 
-  sellers_plot: "126", 
-  sellers_phone_number: "455-743-4567",
-  sellers_email: "exampleseller@gmail.com",
-  password: "password",
-  about_me:"test1", // <------ OPTIONAL
-  sellers_price: 50 // <-------- INTEGER
+	"username": "seeduser2",
+	"password": "password123",
+	"name": "Handell Desulme",
+	"about_me": "I sell produce",
+	"email_address": "hd@example.com"
 }
 ```
 
@@ -58,14 +52,12 @@
 
 ```
 {
-   id: "", 
-   username (unique): "", 
-   password: "", 
-   name: "", 
-   first name: "", 
-   last name: "", 
-   email address: "",
-   about me: ""
+  "id": 3,
+  "username": "seeduser2",
+  "password": "$2a$08$bxkaeRu0H6QRybQpCcQZZ.PMmcwBo/P3TF7nijBUZUQJOXRjtck5y",
+  "name": "Handell Desulme",
+  "email_address": "hd@example.com",
+  "about_me": "I sell produce"
 }
 ```
 
@@ -77,23 +69,17 @@
 
 ```
 {
-  customers_email: "examplecustomer@gmail.com",
-  password: "password"
+  "username": "seeduser2",
+  "password": "password123"
 }
 ```
 
 * Returns id and token:
 
 ```
-{ 
-  id: 4,
-  username: "", 
-  password: "", 
-  name: "", 
-  first name: "", 
-  last name: "", 
-  email address: "",
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IkV4YW1wbGUgVXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTc0MTE1OTY2LCJleHAiOjE1NzQyMDIzNjZ9.5SMRUcR0BzS6I4Bceh7UuuTzvU0IBEGI6y2QQ_jKkJM"
+{
+  "user": "seeduser2",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJ1c2VybmFtZSI6InNlZWR1c2VyMiIsImlhdCI6MTU4MzQ0NDQ3NiwiZXhwIjoxNTgzNDUxNjc2fQ.TCpqGL4FOv4Jb46KDyNkpQX9NST-TgFIAR40q-0OSTE"
 }
 ```
 
@@ -104,24 +90,17 @@
 
 ```
 {
-  sellers_email: "exampleseller@gmail.com",
-  password: "password"
+  "username": "seeduser2",
+  "password": "password123"
 }
 ```
 
 * Returns id and token:
 
 ```
-{ 
-  id: 4,
-  username: "", 
-  password: "", 
-  name: "", 
-  first name: "", 
-  last name: "", 
-  email address: "", 
-  about me: "",
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IkV4YW1wbGUgRHJpdmVyIiwicm9sZSI6ImRyaXZlciIsImlhdCI6MTU3NDExNjIxMywiZXhwIjoxNTc0MjAyNjEzfQ.lza43m8Zg8uAm1hg2Na4g3EKtcb_tDlYbG3zo6GqSSc"
+{
+  "user": "seeduser2",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJ1c2VybmFtZSI6InNlZWR1c2VyMiIsImlhdCI6MTU4MzQ0NDQ3NiwiZXhwIjoxNTgzNDUxNjc2fQ.TCpqGL4FOv4Jb46KDyNkpQX9NST-TgFIAR40q-0OSTE"
 }
 ```
 
