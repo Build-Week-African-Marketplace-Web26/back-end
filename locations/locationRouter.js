@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const LocationModel = require('./locationModel.js');
-router.get('/locations', (req, res) => {
+router.get('/', (req, res) => {
     CategoryModel.find()
         .then(locations => {
             res.json(locations);
@@ -9,7 +9,7 @@ router.get('/locations', (req, res) => {
             res.status(500).json({ message: 'Failed to get locations' });
         });
 });
-router.get('/locations/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     const { id } = req.params;
 
     CategoryModel.findByID(id)

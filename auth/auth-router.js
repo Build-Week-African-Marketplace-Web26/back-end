@@ -12,11 +12,11 @@ router.post('/register/seller', (req, res) => {
     user.password = hash;
     SellerModel.add(user)
         .then(saved => {
-            console.log('seller register endpoint reached')
+            console.log('seller register endpoint reached');
             res.status(201).json(saved);
         })
         .catch(error => {
-            console.log('seller register endpoint reached err')
+            console.log('seller register endpoint reached err');
             res.status(500).json(error);
         });
 });

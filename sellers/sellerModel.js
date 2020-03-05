@@ -25,10 +25,10 @@ function findByID(id) {
         .first();
 }
 
-function add(user) {
-    return db("sellers")
-        .insert(user);
-    // return findByID(id);
+async function add(user) {
+    const [id] = await db("sellers")
+        .insert(user, 'id');
+    return findByID(id);
 }
 
 async function update(changes, username) {

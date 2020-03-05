@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const CustomerModel = require('./customerModel.js');
-router.put('/customer/:username', (req, res) => {
+router.put('/:username', (req, res) => {
     let user = req.body;
     let {username} = req.params;
     CustomerModel.findBy(username)

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const ItemModel = require('./itemModel.js');
-router.get('/items', (req, res) => {
+router.get('/', (req, res) => {
     ItemModel.find()
         .then(items => {
             res.json(items);
@@ -9,7 +9,7 @@ router.get('/items', (req, res) => {
             res.status(500).json({ message: 'Failed to get items' });
         });
 });
-router.get('/items/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     const { id } = req.params;
 
     ItemModel.findBy(id)

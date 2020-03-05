@@ -8,12 +8,9 @@ exports.up = function(knex) {
         tbl.text('password')
             .notNullable();
         tbl.text('name');
-        tbl.text('first_name');
-        tbl.text('last_name');
         tbl.text('email_address')
             .unique()
             .notNullable();
-        tbl.text('token');
     })
 };
 
