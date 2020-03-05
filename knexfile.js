@@ -24,16 +24,16 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: 'postgresql://localhost',
+    connection: 'postgresql://localhost/marketplace',
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      directory: './data/migrations'
+      directory: './database/migrations'
     },
     seeds: {
-      directory: './data/seeds'
+      directory: './database/seeds'
     },
   }
 

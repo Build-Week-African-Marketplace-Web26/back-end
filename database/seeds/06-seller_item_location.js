@@ -1,7 +1,8 @@
 
 exports.seed = function(knex) {
     // Deletes ALL existing entries
-    return knex('sellers_items_locations').truncate()
+    // return knex('sellers_items_locations').truncate()
+    return knex.raw('TRUNCATE TABLE sellers_items_locations CASCADE')
         .then(function () {
             // Inserts seed entries
             return knex('sellers_items_locations').insert([

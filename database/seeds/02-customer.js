@@ -1,15 +1,16 @@
 
 exports.seed = function(knex) {
     // Deletes ALL existing entries
-    return knex('customers').truncate()
+    // return knex('customers').truncate()
+    return knex.raw('TRUNCATE TABLE customers CASCADE')
         .then(function () {
             // Inserts seed entries
             return knex('customers').insert([
                 {
-                    username: 'seeduser2',
+                    username: 'jsue',
                     password: 'seedpassword2',
-                    name: 'Customer Name',
-                    email_address: 'customer@email.com'
+                    name: 'Jeannette Sue',
+                    email_address: 'jsue@email.com'
                 },
             ]);
         });
