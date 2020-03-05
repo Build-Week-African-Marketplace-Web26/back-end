@@ -32,10 +32,10 @@ async function add(user) {
 }
 
 async function update(changes, username) {
-    await db('sellers')
+    const id = await db('sellers')
         .where("username", username)
-        .update(changes, 'id');
-    return findByID(id);
+        .update(changes, 'id'); //username could be returned instead
+    return findByID(id); //I could findBy username
 }
 
 function remove(username) {

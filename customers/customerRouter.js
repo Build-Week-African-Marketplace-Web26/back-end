@@ -11,7 +11,7 @@ router.put('/:username', (req, res) => {
                         res.status(201).json(updatedSeller);
                     })
             } else {
-                res.status(404).json({message: 'Could find seller with given username'})
+                res.status(404).json({message: 'Could not find customer with given username'})
             }
         })
         .catch( err => {

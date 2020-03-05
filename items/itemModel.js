@@ -31,7 +31,7 @@ async function add(item) {
 }
 
 async function update(changes, name) {
-    await db('items')
+    const id = await db('items')
         .where("name", name)
         .update(changes, 'id');
     return findByID(id);
