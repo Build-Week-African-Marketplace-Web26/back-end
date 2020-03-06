@@ -44,9 +44,14 @@ function findByID(id) {
         .first();
 }
 
-async function add(item, location, seller_id) {
+async function add(item, sil, ci) {
     const [id] = await db("items")
         .insert(item, 'id');
+    await db("sellers_items_locations")
+        .insert(sil);
+    if (findBy(item.name))
+    await db("categories_items")
+        .insert(sil);
     return findByID(id);
 }
 

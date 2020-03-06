@@ -18,4 +18,18 @@ router.put('/:username', (req, res) => {
             res.status(500).json({message: 'Failed to update seller'});
         })
 });
+router.delete('/:username', (req, res) => {
+    const { username } = req.params;
+    CustomerModel.remove(username)
+        .then(deleted => {
+            if (deleted) {
+                res.json({ removed: deleted });
+            } else {
+                res.status(404).json({ message: 'Could not find customer with given id' });
+            }
+        })
+        .catch(err => {
+            res.status(500).json({ message: 'Failed to delete customer' });
+        });
+});
 module.exports = router;

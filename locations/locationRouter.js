@@ -24,4 +24,13 @@ router.get('/:id', (req, res) => {
             res.status(500).json({ message: 'Failed to get locations' });
         });
 });
+router.post('/', (req, res) => {
+    LocationModel.add()
+        .then(locations => {
+            res.json(locations);
+        })
+        .catch(err => {
+            res.status(500).json({ message: 'Failed to get locations' });
+        });
+});
 module.exports = router;

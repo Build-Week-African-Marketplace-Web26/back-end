@@ -7,7 +7,7 @@
 **Unprotected Endpoints (token needed)**
 ------------------------------------------
 
-###Register
+### **Register**
 
 ### POST  https://build-african-marketplace.herokuapp.com/api/auth/register/customer
 * Endpoint to register a new customer
@@ -61,7 +61,7 @@
 }
 ```
 
-###Login
+### **Login**
 
 ### POST  https://build-african-marketplace.herokuapp.com/api/auth/login/customer
 * Endpoint to login as a customer

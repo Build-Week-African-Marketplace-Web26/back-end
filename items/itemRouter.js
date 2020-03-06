@@ -26,19 +26,22 @@ router.get('/:username', (req, res) => {
 });
 router.post('/', (req, res) => {
     const itemData = req.body;
-    const {seller_id, address, city, state, postal_code} = req.query;
-    const location = {
-        address: address,
-        city: city,
-        state: state,
-        postal_code: postal_code
-    };
     ItemModel.add(itemData)
         .then(item => {
             res.status(201).json(item);
         })
         .catch (err => {
             res.status(500).json({ message: 'Failed to create new item' });
+        });
+});
+router.delete('/:username', (req, res) => {
+    const username = req.body;
+    ItemModel.remove(username)
+        .then(item => {
+            res.status(201).json(item);
+        })
+        .catch (err => {
+            res.status(500).json({ message: 'Failed to remove new item' });
         });
 });
 
